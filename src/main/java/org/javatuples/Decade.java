@@ -31,6 +31,7 @@ import java.util.Iterator;
  * </p>
  *
  * @author Daniel Fern&aacute;ndez
+ * @author Manu Manjunath
  * @since 1.0
  */
 public final class Decade<A, B, C, D, E, F, G, H, I, J>
@@ -312,7 +313,7 @@ public final class Decade<A, B, C, D, E, F, G, H, I, J>
     public J getValue9() {
         return this.val9;
     }
-    
+
     public static int getSize() {
         return SIZE;
     }

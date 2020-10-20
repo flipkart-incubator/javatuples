@@ -31,6 +31,7 @@ import java.util.Iterator;
  * </p>
  *
  * @author Daniel Fern&aacute;ndez
+ * @author Manu Manjunath
  * @since 1.0
  */
 public final class Quartet<A, B, C, D>

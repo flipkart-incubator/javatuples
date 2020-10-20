@@ -24,7 +24,7 @@
     <groupId>com.flipkart.utils</groupId>
     <artifactId>javatuples</artifactId>
     <packaging>jar</packaging>
-    <version>2.0</version>
+    <version>3.0</version>
     <name>javatuples</name>
     <description>Java library for tuples in Java.</description>
     <properties>
@@ -35,13 +35,13 @@
     <licenses>
         <license>
             <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
     <organization>
-        <name>The JAVATUPLES team</name>
-        <url>http://www.javatuples.org</url>
+        <name>Flipkart</name>
+        <url>https://www.flipkart.com</url>
     </organization>
     <url>https://github.com/flipkart-incubator/javatuples</url>
     <scm>
@@ -55,6 +55,16 @@
             <roles>
                 <role>Project admin</role>
             </roles>
+        </developer>
+        <developer>
+            <id>m-manu</id>
+            <name>Manu Manjunath</name>
+            <email>manu(dot)m(dot)karnataki(at)gmail(dot)com</email>
+            <roles>
+                <role>development</role>
+            </roles>
+            <organization>Flipkart</organization>
+            <organizationUrl>https://www.flipkart.com</organizationUrl>
         </developer>
     </developers>
     <distributionManagement>
@@ -80,6 +90,12 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>${jackson-version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.16</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
