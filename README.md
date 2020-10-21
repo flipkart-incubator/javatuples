@@ -1,15 +1,18 @@
-# javatuples
+# Java Tuples
 
-This is a fork of [javatuples](https://github.com/javatuples/javatuples) with following improvements/fixes:
+This is a fork of the popular [javatuples](https://github.com/javatuples/javatuples) library with following improvements/fixes:
 
  1. Built on Java 8 using Maven 3 with latest plugins
  2. Serialization (with popular libraries such as Jackson etc.) working correctly
-     * Tested for tuples containing data types `boolean`, `int`, `String` and `double`  
+     * Tested for tuples containing data types `boolean`, `int`, `String` and `double`
+ 3. Minor lint-related improvements
  
 Even with above improvements, this fork maintains: 
 
  1. No change from original in its interface (your existing code should compile just fine when you upgrade to this)
  2. Zero dependency on any library (needs only JDK)
+ 
+Read this good article on how to use: https://www.baeldung.com/java-tuples (except for the Maven dependency for which see below section)
 
 ## Usage
 If you are using Maven, add below entry within the `dependencies` section of your `pom.xml`:
