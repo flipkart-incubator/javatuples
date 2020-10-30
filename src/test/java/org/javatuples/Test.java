@@ -19,17 +19,23 @@
  */
 package org.javatuples;
 
-import junit.framework.TestCase;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
+
+import java.net.Socket;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.SerializationUtils;
 
-import java.net.Socket;
-import java.util.*;
+class Test {
 
-public class Test extends TestCase {
-
-    public void testMain() {
-
+    @org.junit.jupiter.api.Test
+    void testMain() {
 
         final Decade<Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer, Integer> decade =
                 Decade.with(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);

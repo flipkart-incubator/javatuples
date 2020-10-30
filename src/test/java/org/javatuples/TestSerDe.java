@@ -1,15 +1,14 @@
 package org.javatuples;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.Assert.assertEquals;
-
-public class TestSerDe {
+class TestSerDe {
 
     final List<Tuple> tuples = Arrays.asList(
             Unit.with(1),
@@ -27,13 +26,12 @@ public class TestSerDe {
     );
 
     @Test
-    public void testJackson() throws IOException {
+    void testJackson() throws IOException {
         ObjectMapper objectMapper = new ObjectMapper();
         for (Tuple tuple : tuples) {
             String serializedTuple = objectMapper.writeValueAsString(tuple);
             Tuple deserializedTuple = objectMapper.readValue(serializedTuple, tuple.getClass());
-            assertEquals("Upon serializing and then deserializing back, there was loss of information in tuple",
-                    tuple, deserializedTuple);
+            assertEquals(tuple, deserializedTuple,"Upon serializing and then deserializing back, there was loss of information in tuple");
         }
     }
 
